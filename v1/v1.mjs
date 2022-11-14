@@ -1,7 +1,7 @@
 import fg from "fast-glob";
 import { readFile } from "node:fs/promises";
 import chalk from "chalk";
-import { expect } from "../lib.mjs";
+import { expect } from "../v2/lib.mjs";
 
 const main = async () => {
   const root = process.cwd();
