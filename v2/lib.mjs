@@ -9,7 +9,7 @@ export const expect = (received) => ({
 
 export const context = {
   suites: [],
-  currentSuite: [],
+  currentSuite: null,
 };
 
 export const suite = (title, fn) => {
