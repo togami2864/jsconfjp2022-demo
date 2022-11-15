@@ -7,7 +7,7 @@ const runFile = (suite) => {
     title: suite.title,
     cases: [],
   };
-  for (const task of suite.queue) {
+  for (const task of suite.cases) {
     const r = {
       title: task.title,
       error: null,

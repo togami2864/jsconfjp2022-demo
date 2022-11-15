@@ -13,13 +13,14 @@ export const context = {
 };
 
 export const suite = (title, fn) => {
-  const queue = [];
+  const cases = [];
+
   function test(title, fn) {
     const task = {
       title,
       fn,
     };
-    queue.push(task);
+    cases.push(task);
   }
 
   function collect() {
@@ -27,13 +28,13 @@ export const suite = (title, fn) => {
     try {
       fn();
     } catch (e) {}
-    return [...queue];
+    return [...cases];
   }
 
   const suite = {
     title,
     test,
-    queue,
+    cases,
     collect,
   };
   context.suites.push(suite);

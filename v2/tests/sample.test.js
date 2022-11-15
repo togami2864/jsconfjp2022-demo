@@ -1,6 +1,6 @@
 import { it, describe, expect } from "../lib.mjs";
 
-describe("1.simple test cases", () => {
+describe("1. simple test cases", () => {
   it("case1", () => {
     expect("foo").toBe("foo");
   });
@@ -9,7 +9,7 @@ describe("1.simple test cases", () => {
   });
 });
 
-describe("2.of course, work as intended!!", () => {
+describe("2. of course, work as intended!!", () => {
   it("case3", () => {
     expect(parseInt(0.000005)).toBe(0);
   });
@@ -18,7 +18,7 @@ describe("2.of course, work as intended!!", () => {
   });
 });
 
-describe("3.failure cases", () => {
+describe("3. failure cases", () => {
   it("case5", () => {
     expect("apple").toBe("banana");
   });
