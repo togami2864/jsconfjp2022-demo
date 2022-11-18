@@ -15,7 +15,7 @@ export const context = {
 export const suite = (title, fn) => {
   const cases = [];
 
-  function test(title, fn) {
+  function it(title, fn) {
     const task = {
       title,
       fn,
@@ -33,8 +33,8 @@ export const suite = (title, fn) => {
 
   const suite = {
     title,
-    test,
     cases,
+    it,
     collect,
   };
   context.suites.push(suite);
@@ -44,5 +44,5 @@ export const suite = (title, fn) => {
 //alias
 export const describe = suite;
 export const it = (name, fn) => {
-  context.currentSuite.test.call(this, name, fn);
+  context.currentSuite.it.call(this, name, fn);
 };

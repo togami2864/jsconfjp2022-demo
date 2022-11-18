@@ -30,6 +30,7 @@ const main = async () => {
     for (const suite of context.suites) {
       await suite.collect();
       const results = runFile(suite);
+
       console.log(`\n${chalk.bold(results.title)}:${chalk.dim(filepath)}`);
       for (const r of results.cases) {
         if (r.error === null) {
